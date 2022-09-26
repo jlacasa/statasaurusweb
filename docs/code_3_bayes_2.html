@@ -8,7 +8,7 @@
 
 <meta name="author" content="Adrian Correndo &amp; Josefina Lacasa">
 
-<title>Statasaurus - Fall 2022 - Code #2</title>
+<title>Statasaurus - Fall 2022 - Week #3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,10 +122,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Statasaurus - Fall 2022 - Code #2">
+<meta property="og:title" content="Statasaurus - Fall 2022 - Week #3">
 <meta property="og:description" content="This is a follow-up article from Bayes#1. Still, we do have numerous important concepts in order to understand what the computational codes are doing behind scenes when running a Bayesian analysis.">
 <meta property="og:site-name" content="Statasaurus - Fall 2022">
-<meta name="twitter:title" content="Statasaurus - Fall 2022 - Code #2">
+<meta name="twitter:title" content="Statasaurus - Fall 2022 - Week #3">
 <meta name="twitter:description" content="This is a follow-up article from Bayes#1. Still, we do have numerous important concepts in order to understand what the computational codes are doing behind scenes when running a Bayesian analysis.">
 <meta name="twitter:creator" content="@aacorrendo">
 <meta name="twitter:card" content="summary">
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Code #2</h1>
+      <h1 class="quarto-secondary-nav-title">Week #3</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -245,15 +245,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#acceptancerejection-sampling-basics" id="toc-acceptancerejection-sampling-basics" class="nav-link" data-scroll-target="#acceptancerejection-sampling-basics">1. Acceptance/Rejection Sampling Basics:</a></li>
   </ul></li>
   <li><a href="#markov-chain-monte-carlo" id="toc-markov-chain-monte-carlo" class="nav-link" data-scroll-target="#markov-chain-monte-carlo">2. Markov Chain Monte Carlo</a></li>
-  <li><a href="#brms-bayesian-regression-models-using-stan" id="toc-brms-bayesian-regression-models-using-stan" class="nav-link" data-scroll-target="#brms-bayesian-regression-models-using-stan">3. brms: Bayesian Regression Models using “Stan”</a>
+  <li><a href="#brms-bayesian-regression-models-using-stan" id="toc-brms-bayesian-regression-models-using-stan" class="nav-link" data-scroll-target="#brms-bayesian-regression-models-using-stan">3. <em>brms</em>: Bayesian Regression Models using “Stan”</a>
   <ul class="collapse">
   <li><a href="#fit-brms" id="toc-fit-brms" class="nav-link" data-scroll-target="#fit-brms">Fit brms</a></li>
   <li><a href="#brms-pars" id="toc-brms-pars" class="nav-link" data-scroll-target="#brms-pars">brms pars</a></li>
   <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
-  <li><a href="#extract-posterior-distributions" id="toc-extract-posterior-distributions" class="nav-link" data-scroll-target="#extract-posterior-distributions">Extract posterior distributions</a></li>
+  <li><a href="#using-posterior-distributions" id="toc-using-posterior-distributions" class="nav-link" data-scroll-target="#using-posterior-distributions">Using posterior distributions</a></li>
   </ul></li>
-  <li><a href="#rstan-r-interface-to-stan" id="toc-rstan-r-interface-to-stan" class="nav-link" data-scroll-target="#rstan-r-interface-to-stan">4. rstan: R interface to “Stan”</a></li>
-  <li><a href="#rjags-r-interface-to-just-another-gibbs-sampler" id="toc-rjags-r-interface-to-just-another-gibbs-sampler" class="nav-link" data-scroll-target="#rjags-r-interface-to-just-another-gibbs-sampler">5. rjags: R interface to “Just Another Gibbs Sampler”</a></li>
+  <li><a href="#rstan-r-interface-to-stan" id="toc-rstan-r-interface-to-stan" class="nav-link" data-scroll-target="#rstan-r-interface-to-stan">4. <em>rstan</em>: R interface to “Stan”</a></li>
+  <li><a href="#rjags-r-interface-to-just-another-gibbs-sampler" id="toc-rjags-r-interface-to-just-another-gibbs-sampler" class="nav-link" data-scroll-target="#rjags-r-interface-to-just-another-gibbs-sampler">5. <em>rjags</em>: R interface to “Just Another Gibbs Sampler”</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/adriancorrendo/statasaurusweb/edit/main/code_3_bayes_2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/adriancorrendo/statasaurusweb/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -263,7 +263,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Code #2</h1>
+<h1 class="title d-none d-lg-block">Week #3</h1>
 </div>
 
 
@@ -457,13 +457,21 @@ Note
 </section>
 <section id="markov-chain-monte-carlo" class="level2">
 <h2 class="anchored" data-anchor-id="markov-chain-monte-carlo">2. Markov Chain Monte Carlo</h2>
+<p><img src="images/Handbook.jpg" class="img-fluid" width="241"></p>
+<p>Markov chain Monte Carlo (MCMC) methods have revolutionized statistical computing and have had an especially profound impact on the practice of Bayesian statistics (Brooks et al., 2011).</p>
+<p>In a nutshell, MCMC represents a family of algorithms that facilitate the generation of random samples from probability distributions that are difficult (e.g.&nbsp;high-dimensional) to sample directly. They are “chains” because the random samples are produced in consecutive-dependent steps (i.e.&nbsp;step 2 comes from step 1, step 3 comes from step 2, ….). This details is a game-changer to more efficiently use and integrate Monte Carlos simulations.</p>
+<p>Sources on MCMC:</p>
+<p><a href="https://www.mcmchandbook.net/" class="uri">https://www.mcmchandbook.net/</a></p>
+<p><a href="https://cran.r-project.org/package=MCMCpack" class="uri">https://cran.r-project.org/package=MCMCpack</a></p>
+<p><a href="https://cran.r-project.org/package=mcmc" class="uri">https://cran.r-project.org/package=mcmc</a></p>
+<p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3759243" class="uri">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3759243</a></p>
 <div data-align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qqz5AJjyugM" frameborder="0" allowfullscreen="">
 </iframe>
 </div>
 </section>
 <section id="brms-bayesian-regression-models-using-stan" class="level2">
-<h2 class="anchored" data-anchor-id="brms-bayesian-regression-models-using-stan">3. brms: Bayesian Regression Models using “Stan”</h2>
+<h2 class="anchored" data-anchor-id="brms-bayesian-regression-models-using-stan">3. <em>brms</em>: Bayesian Regression Models using “Stan”</h2>
 <p><img src="images/brms.png" class="img-fluid"></p>
 <p>Documentation: <a href="https://paul-buerkner.github.io/brms/" class="uri">https://paul-buerkner.github.io/brms/</a></p>
 <p>Bug-reports: <a href="https://github.com/paul-buerkner/brms/issues" class="uri">https://github.com/paul-buerkner/brms/issues</a></p>
@@ -582,8 +590,8 @@ Coefficients:
 </div>
 </div>
 </section>
-<section id="extract-posterior-distributions" class="level3">
-<h3 class="anchored" data-anchor-id="extract-posterior-distributions">Extract posterior distributions</h3>
+<section id="using-posterior-distributions" class="level3">
+<h3 class="anchored" data-anchor-id="using-posterior-distributions">Using posterior distributions</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create predictions</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> data_frame <span class="sc">%&gt;%</span> </span>
@@ -654,7 +662,7 @@ Please use `cols = c(data)`</code></pre>
 </section>
 </section>
 <section id="rstan-r-interface-to-stan" class="level2">
-<h2 class="anchored" data-anchor-id="rstan-r-interface-to-stan">4. rstan: R interface to “Stan”</h2>
+<h2 class="anchored" data-anchor-id="rstan-r-interface-to-stan">4. <em>rstan</em>: R interface to “Stan”</h2>
 <p><img src="images/stanlogo.png" class="img-fluid" width="190"></p>
 <p>Documentation: <a href="https://mc-stan.org/rstan/" class="uri">https://mc-stan.org/rstan/</a></p>
 <p>Bug reports: <a href="https://github.com/stan-dev/rstan/issues/" class="uri">https://github.com/stan-dev/rstan/issues/</a></p>
@@ -663,7 +671,7 @@ Please use `cols = c(data)`</code></pre>
 <p>We will not fit a model directly with stan today, but <em>brms</em> brings a function that allows users to obtain the code to run the analysis by ourselves using rstan. Let’s see…</p>
 </section>
 <section id="rjags-r-interface-to-just-another-gibbs-sampler" class="level2">
-<h2 class="anchored" data-anchor-id="rjags-r-interface-to-just-another-gibbs-sampler">5. rjags: R interface to “Just Another Gibbs Sampler”</h2>
+<h2 class="anchored" data-anchor-id="rjags-r-interface-to-just-another-gibbs-sampler">5. <em>rjags</em>: R interface to “Just Another Gibbs Sampler”</h2>
 <p><img src="images/1601161_JAGS.png" class="img-fluid" width="318"></p>
 <p>Documentation: <a href="https://mcmc-jags.sourceforge.io/" class="uri">https://mcmc-jags.sourceforge.io/</a></p>
 <p>Bug reports: <a href="https://sourceforge.net/projects/mcmc-jags/" class="uri">https://sourceforge.net/projects/mcmc-jags/</a></p>
